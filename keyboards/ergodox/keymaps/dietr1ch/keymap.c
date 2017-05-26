@@ -5,7 +5,7 @@
 
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
-#define MDIA 2 // media keys
+#define ARRW 2 // media keys
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                             `--------------------'
                                                      ALT_T(KC_APP),  KC_LGUI,
                                                                      KC_HOME,
-                                            KC_BSPC, KC_TAB,         KC_END,
+                                           KC_BSPC, LT(ARRW, KC_TAB),KC_END,
 
 //                    ,--------------------------------------------------.
 //        Layer 0     |   7  |   8  |   9  |   0  |   -  |   =  |   ]    |
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                  `----------------------------------'
              KC_7,        KC_8,  KC_9,   KC_0,   KC_MINS,KC_EQL,           KC_RBRC,
              TG(SYMB),    KC_Y,  KC_U,   KC_I,   KC_O,   KC_P,             KC_LBRC,
-                          KC_H,  KC_J,   KC_K,   KC_L,   LT(MDIA, KC_SCLN),GUI_T(KC_QUOT),
+                          KC_H,  KC_J,   KC_K,   KC_L,   LT(ARRW, KC_SCLN),GUI_T(KC_QUOT),
              MEH_T(KC_NO),KC_N,  KC_M,   KC_COMM,KC_DOT, CTL_T(KC_SLSH),   KC_RSFT,
                                  KC_RALT,KC_LBRC,KC_RBRC,KC_BSLS,          KC_FN1,
 //    ,-------------.
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // ,--------------------------------------------------.
 // |        |      |      |      |      |      |      |    Layer 2
-// |--------+------+------+------+------+-------------| Media & Mouse
+// |--------+------+------+------+------+-------------|    Movement
 // |        |      |      | MsUp |      |      |      |
 // |--------+------+------+------+------+------|      |
 // |        |      |MsLeft|MsDown|MsRght|      |------|
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // `--------+------+------+------+------+-------------'
 //   |      |      |      | Lclk | Rclk |
 //   `----------------------------------'
-[MDIA] = KEYMAP(
+[ARRW] = KEYMAP(
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
@@ -165,18 +165,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                  ,--------------------------------------------------.
 //                  |      |      |      |      |      |      |        |
 //      Layer 2     |      |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
-//   Media & Mouse  |------+------+------+------+------+------+--------|
-//                  |      |      |      |      |      |      |        |
+//      Movement    |------+------+------+------+------+------+--------|
+//                  |      |      |      |  Up  |      |      |        |
 //       Right      |      |------+------+------+------+------+--------|
-//                  |------|      |      |      |      |      |  Play  |
+//                  |------|      | Left | Down | Right|      |  Play  |
 //                  |      |------+------+------+------+------+--------|
 //                  |      |      |      | Prev | Next |      |        |
 //                  `-------------+------+------+------+------+--------'
 //                                |VolUp |VolDn | Mute |      |      |
 //                                `----------------------------------'
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPLY,
+       KC_TRNS,  KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS,
+                 KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT,KC_TRNS, KC_MPLY,
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
                           KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
 //    ,-------------.

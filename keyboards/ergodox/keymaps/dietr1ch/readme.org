@@ -1,0 +1,7 @@
+* Dietr1ch's ErgoDox EZ Configuration
+
+This is my own config. I keep the qwerty layout as I use software dvp.
+
+** Changelog
+*** May 2017
+Init

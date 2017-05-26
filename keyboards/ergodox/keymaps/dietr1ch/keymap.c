@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.
  * |    `   |   1  |   2  |   3  |   4  |   5  |   6  |
  * |--------+------+------+------+------+-------------|
- * | Del    |   Q  |   W  |   E  |   R  |   T  |  L1  |
+ * |   Del  |   Q  |   W  |   E  |   R  |   T  |  L1  |
  * |--------+------+------+------+------+------|      |
  * |F13/Ctrl|   A  |   S  |   D  |   F  |   G  |------|
  * |--------+------+------+------+------+------| Hyper|
@@ -58,15 +58,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                    | Meh  |------+------+------+------+------+--------|
  *                    |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  *                    `-------------+------+------+------+------+--------'
- *                                  |  Up  |   [  |   ]  |   \  | ~L1  |
+ *                                  | RAlt |   [  |   ]  |   \  | ~L1  |
  *                                  `----------------------------------'
  */
 
-             KC_7,        KC_8,   KC_9,  KC_0,   KC_MINS,KC_EQL,           KC_RBRC,
-             TG(SYMB),    KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             KC_LBRC,
-                          KC_H,   KC_J,  KC_K,   KC_L,   LT(MDIA, KC_SCLN),GUI_T(KC_QUOT),
-             MEH_T(KC_NO),KC_N,   KC_M,  KC_COMM,KC_DOT, CTL_T(KC_SLSH),   KC_RSFT,
-                                 KC_BSLS,KC_LBRC,KC_RBRC,KC_BSLS,          KC_FN1,
+             KC_7,        KC_8,  KC_9,   KC_0,   KC_MINS,KC_EQL,           KC_RBRC,
+             TG(SYMB),    KC_Y,  KC_U,   KC_I,   KC_O,   KC_P,             KC_LBRC,
+                          KC_H,  KC_J,   KC_K,   KC_L,   LT(MDIA, KC_SCLN),GUI_T(KC_QUOT),
+             MEH_T(KC_NO),KC_N,  KC_M,   KC_COMM,KC_DOT, CTL_T(KC_SLSH),   KC_RSFT,
+                                 KC_RALT,KC_LBRC,KC_RBRC,KC_BSLS,          KC_FN1,
 /* Keymap 0: Right hand
  *    ,-------------.
  *    | Alt  |Ctrl/Esc|

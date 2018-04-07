@@ -45,8 +45,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
 
-#define DEBOUNCE 30
-
 #define TAPPING_TOGGLE  1
 
 /* define if matrix has ghost */
@@ -120,6 +118,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 5, which is now closer to 10ms, but still plenty according to
  * manufacturer specs.
  */
+#define DEBOUNCE    3
 
 
 // RGB backlight

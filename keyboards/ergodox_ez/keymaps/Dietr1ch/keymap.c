@@ -6,6 +6,7 @@
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define MDIA 2 // media keys
+#define GAME 3 // gaming
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
@@ -15,14 +16,15 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |    `   |   1  |   2  |   3  |   4  |   5  |   6  |           |   7  |   8  |   9  |   0  |   -  |   =  |   ]    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Del    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   [    |
+ * |   DEL  |   Q  |   W  |   E  |   R  |   T  |~SYMB~|           |~GAME~|   Y  |   U  |   I  |   O  |   P  |   [    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |F13/Ctrl|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |' / Cmd |
+ * |  RCtrl |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |' / Cmd |
  * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
  * | LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -36,14 +38,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 |      |~MDIA~| End  |       | PgDn | ~MDIA~ |      |
  *                                 `--------------------'       `----------------------'
  */
-// If it accepts an argument (i.e, is a function), it doesn't need KC_.
-// Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
         KC_GRAVE,       KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_6,
         KC_DELT,        KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   TG(SYMB),
-        CTL_T(KC_F13),  KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
-        KC_LSFT,        CTL_T(KC_Z),  KC_X,   KC_C,   KC_V,   KC_B,   ALL_T(KC_NO),
+        KC_RCTL,        KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
+        KC_LSFT,        RCTL_T(KC_Z), KC_X,   KC_C,   KC_V,   KC_B,   ALL_T(KC_NO),
         LT(SYMB,KC_GRV),KC_QUOT,      LALT(KC_LSFT),  KC_LEFT,GUI_T(KC_ESC),
 
                                               ALT_T(KC_APP),  KC_LGUI,
@@ -52,15 +52,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // right hand
              KC_7,        KC_8,  KC_9,   KC_0,   KC_MINS, KC_EQL,           KC_RBRC,
-             TG(SYMB),    KC_Y,  KC_U,   KC_I,   KC_O,    KC_P,             KC_LBRC,
+             TG(GAME),    KC_Y,  KC_U,   KC_I,   KC_O,    KC_P,             KC_LBRC,
                           KC_H,  KC_J,   KC_K,   KC_L,    KC_SCLN,          GUI_T(KC_QUOT),
              MEH_T(KC_NO),KC_N,  KC_M,   KC_COMM,KC_DOT,  CTL_T(KC_SLSH),   KC_RSFT,
                                  KC_RALT,KC_LBRC,KC_RBRC, KC_BSLS,          KC_FN1,
 
        KC_LALT,  CTL_T(KC_ESC),
        KC_PGUP,
-        KC_PGDN,  LT(MDIA, KC_ENT),    KC_SPC
+       KC_PGDN,  LT(MDIA, KC_ENT),    KC_SPC
     ),
+
+
 /* Keymap 1: Symbol Layer
  *
  * ,---------------------------------------------------.           ,--------------------------------------------------.
@@ -106,6 +108,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,
        KC_TRNS, RGB_HUD, RGB_HUI
 ),
+
+
 /* Keymap 2: Media and mouse keys
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
@@ -150,6 +154,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_WBAK
 ),
+
+/* Keymap 3: Gaming layer
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |   ESC  |   1  |   2  |   3  |   4  |   5  |   6  |           |   7  |   8  |   9  |   0  |   -  |   =  |   ]    |
+ * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+ * |   TAB  |   Q  |   W  |   E  |   R  |   T  |   7  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   [    |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |  Ctrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |' / Cmd |
+ * |--------+------+------+------+------+------|   8  |           | Meh  |------+------+------+------+------+--------|
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   | LCTL |   Y  |   H  |   N  |  SPC |                                      | RAlt |   [  |   ]  |   \  | ~L1  |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |  <-  |  ->  |       | Alt  |Ctrl/Esc|
+ *                                 ,------|------|------|       |------+--------+------.
+ *                                 |      |      |  ^   |       | PgUp |        |      |
+ *                                 |  SPC |  ENT |--|---|       |------|  Enter |  SPC |
+ *                                 |      |      |  v   |       | PgDn | ~MDIA~ |      |
+ *                                 `--------------------'       `----------------------'
+ */
+[GAME] = LAYOUT_ergodox(  // layer 3 : Gaming
+        // left hand
+        KC_ESC,   KC_1,  KC_2,   KC_3,   KC_4,   KC_5,   KC_6,
+        KC_TAB,   KC_Q,  KC_W,   KC_E,   KC_R,   KC_T,   KC_7,
+        KC_LCTL,  KC_A,  KC_S,   KC_D,   KC_F,   KC_G,
+        KC_LSFT,  KC_Z,  KC_X,   KC_C,   KC_V,   KC_B,   KC_8,
+        KC_LCTL,  KC_Y,  KC_H,   KC_N,   KC_SPC,
+
+                                                    KC_LEFT,  KC_RIGHT,
+                                                              KC_UP,
+                                            KC_SPC,  KC_ENT,  KC_DOWN,
+
+        // right hand
+             KC_7,        KC_8,  KC_9,   KC_0,   KC_MINS, KC_EQL,           KC_RBRC,
+             KC_TRNS,    KC_Y,  KC_U,   KC_I,   KC_O,    KC_P,             KC_LBRC,
+                          KC_H,  KC_J,   KC_K,   KC_L,    KC_SCLN,          GUI_T(KC_QUOT),
+             MEH_T(KC_NO),KC_N,  KC_M,   KC_COMM,KC_DOT,  CTL_T(KC_SLSH),   KC_RSFT,
+                                 KC_RALT,KC_LBRC,KC_RBRC, KC_BSLS,          KC_FN1,
+
+       KC_LALT,  CTL_T(KC_ESC),
+       KC_PGUP,
+        KC_PGDN,  LT(MDIA, KC_ENT),    KC_SPC
+    ),
 
 
 

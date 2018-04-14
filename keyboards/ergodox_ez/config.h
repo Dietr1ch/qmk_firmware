@@ -119,7 +119,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * manufacturer specs.
  */
 #define DEBOUNCE    3
-
+#define FORCE_NKRO
 
 // RGB backlight
 #define DRIVER_ADDR_1 0b1110100

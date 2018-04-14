@@ -3,7 +3,7 @@
 -I./drivers
 -I./drivers/avr
 -I./keyboards/ergodox_ez
--I./keyboards/ergodox_ez/keymaps/vim
+-I./keyboards/ergodox_ez/keymaps/Dietr1ch
 -I./lib
 -I./lib/lufa
 -I./quantum

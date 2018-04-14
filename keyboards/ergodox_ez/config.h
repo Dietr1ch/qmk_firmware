@@ -95,7 +95,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * runs seeming to need it. This may change when configuration for
  * this is more directly exposed.
  */
-#define DEBOUNCE    2
+#define DEBOUNCE    1
+
+#define FORCE_NKRO
 
 #define USB_MAX_POWER_CONSUMPTION 500
 

@@ -169,11 +169,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   | LCTL |   Y  |   H  |   N  | LAlt |                                      | RAlt |   [  |   ]  |   \  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  <-  |  ->  |       | Alt  |Ctrl/Esc|
+ *                                        |   9  |  0   |       | Alt  |Ctrl/Esc|
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |  ^   |       | PgUp |        |      |
- *                                 |  SPC |  ENT |--|---|       |------|  Enter |  SPC |
- *                                 |      |      |  v   |       | PgDn | ~MDIA~ |      |
+ *                                 |      |      | PgUp |       | PgUp |        |      |
+ *                                 |  SPC |  ENT |------|       |------|  Enter |  SPC |
+ *                                 |      |      | PgDn |       | PgDn | ~MDIA~ |      |
  *                                 `--------------------'       `----------------------'
  */
 [GAME] = LAYOUT_ergodox(  // layer 3 : Gaming
@@ -184,9 +184,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,  KC_Z,  KC_X,   KC_C,   KC_V,    KC_B,   KC_8,
         KC_LCTL,  KC_Y,  KC_H,   KC_N,   KC_LALT,
 
-                                                    KC_LEFT,  KC_RIGHT,
-                                                              KC_UP,
-                                            KC_SPC,  KC_ENT,  KC_DOWN,
+                                                       KC_9,  KC_0,
+                                                              KC_PGUP,
+                                             KC_SPC,  KC_ENT, KC_PGDN,
 
         // right hand
              KC_7,        KC_8,  KC_9,   KC_0,   KC_MINS, KC_EQL,           KC_RBRC,
@@ -197,7 +197,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
        KC_LALT,  CTL_T(KC_ESC),
        KC_PGUP,
-        KC_PGDN,  LT(MDIA, KC_ENT),    KC_SPC
+       KC_PGDN,  LT(MDIA, KC_ENT),    KC_SPC
     ),
 
 

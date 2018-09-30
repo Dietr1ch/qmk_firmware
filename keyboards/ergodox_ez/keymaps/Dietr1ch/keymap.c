@@ -77,11 +77,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   | EPRM  |      |      |      |      |                                       |   0  |    . |   ±  |      |      |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |Animat|      |       |Toggle|Solid |
+ *                                        |      | Anim |       |Toggle|Solid |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |Bright|Bright|      |       |      |Hue-  |Hue+  |
- *                                 |ness- |ness+ |------|       |------|      |      |
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      | ***  |       | Hue+ |      |      |
+ *                                 |      |      |------|       |------|      |      |
+ *                                 |      |      |  *   |       | Hue- |      |      |
  *                                 `--------------------'       `--------------------'
  */
 [FNCT] = LAYOUT_ergodox(
@@ -92,9 +92,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
           EPRM,KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 
-                                       RGB_MOD,KC_TRNS,
-                                               KC_TRNS,
-                               RGB_VAD,RGB_VAI,KC_TRNS,
+                                       KC_TRNS,RGB_MOD,
+                                               RGB_VAI,
+                               KC_TRNS,KC_TRNS,RGB_VAD,
 
        // right hand
        KC_F7,   KC_F8,   KC_F9,   KC_F10,    KC_F11,  KC_F12,  KC_TRNS,
@@ -104,8 +104,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          KC_KP_0, KC_KP_DOT, KC_PMNS, KC_TRNS, KC_TRNS,
 
        RGB_TOG, RGB_SLD,
-       KC_TRNS,
-       KC_TRNS, RGB_HUD, RGB_HUI
+       RGB_HUI,
+       RGB_HUD, KC_TRNS, KC_TRNS
 ),
 
 

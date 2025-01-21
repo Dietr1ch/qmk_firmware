@@ -2,10 +2,10 @@
 #include "version.h"
 
 enum layers {
-    BASE,  // default layer
-    FNCT,  // Function keys
-    MDIA,  // Media keys + Arrows
-    GAME,  // Gaming
+    BASE, // default layer
+    FNCT, // Function keys
+    MDIA, // Media keys + Arrows
+    GAME, // Gaming
 };
 
 enum custom_keycodes {

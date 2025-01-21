@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                                 ,-------+----------------+----------|     |---------+----------------+--------.
                                                                               KC_HOME,         KC_PGUP,
 //                                                 |       |                |----------|     |---------|                |        |
-                                                    KC_BSPC, LT(MDIA, KC_TAB), KC_END,          KC_PGDN, LT(MDIA, KC_ENT),  KC_SPC
+                                                    KC_BSPC, LT(MDIA, KC_TAB), KC_END,         KC_PGDN, LT(MDIA, KC_ENT),  KC_SPC
 //                                                 `-------+----------------+----------'     `---------+----------------+--------'
 ),
 /* Keymap 1: Function Layer
@@ -179,7 +179,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                            ,-------+--------+-----------|      |---------+--------+--------.
                                                    KC_HOME,         KC_PGUP,
 //                            |       |        |-----------|      |---------|        |        |
-                               KC_SPC,  KC_ENT,    KC_END,           KC_PGDN, KC_HOME, KC_BSPC
+                               KC_SPC,  KC_ENT,    KC_END,          KC_PGDN,  KC_HOME, KC_BSPC
 //                            `-------+--------+-----------'      `---------+--------+--------'
 ),
 };

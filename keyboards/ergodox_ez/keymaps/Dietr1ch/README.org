@@ -1,6 +1,10 @@
 * Dietr1ch's ErgoDox EZ Configuration
 This is my own config. I keep the QWERTY layout, but I use [[https://en.wikipedia.org/wiki/Dvorak_keyboard_layout#Programmer_Dvorak][Programmer Dvorak]] layout via Software.
 
+** Files
+[[./config.h]]
+[[./keymap.c]]
+
 ** Build
 ~just~
 #+begin_src fish

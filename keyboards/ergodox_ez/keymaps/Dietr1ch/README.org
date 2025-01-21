@@ -2,11 +2,13 @@
 This is my own config. I keep the QWERTY layout, but I use [[https://en.wikipedia.org/wiki/Dvorak_keyboard_layout#Programmer_Dvorak][Programmer Dvorak]] layout via Software.
 
 ** Build
+~just~
 #+begin_src fish
   qmk compile -kb 'ergodox_ez/base' -km 'Dietr1ch'
 #+end_src
 
 ** Flash
+~just flash~
 #+begin_src fish
   qmk flash -kb 'ergodox_ez/base' -km 'Dietr1ch'
 #+end_src

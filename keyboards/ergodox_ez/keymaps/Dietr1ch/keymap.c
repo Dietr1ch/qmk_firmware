@@ -179,7 +179,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                            ,-------+--------+-----------|      |---------+--------+--------.
                                                   KC_HOME,          KC_PGUP,
 //                            |       |        |-----------|      |---------|        |        |
-                               KC_SPC,  KC_END,    KC_END,          KC_PGDN,  KC_ENT,  KC_BSPC
+                               KC_SPC,  KC_ENT,    KC_END,          KC_PGDN,  KC_ENT,  KC_BSPC
 //                            `-------+--------+-----------'      `---------+--------+--------'
 ),
 };

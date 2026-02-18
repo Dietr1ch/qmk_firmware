@@ -1,7 +1,7 @@
 #ifndef KEYMAP_CONFIG_H
 #define KEYMAP_CONFIG_H
 
-#define FORCE_NKRO
+#define NKRO_DEFAULT_ON true
 
 #undef DEBOUNCE
 #define DEBOUNCE 5

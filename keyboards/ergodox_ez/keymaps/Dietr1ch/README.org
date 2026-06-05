@@ -1,0 +1,39 @@
+* Dietr1ch's ErgoDox EZ Configuration
+This is my own config. I keep the QWERTY layout, but I use [[https://en.wikipedia.org/wiki/Dvorak_keyboard_layout#Programmer_Dvorak][Programmer Dvorak]] layout via Software.
+
+** Files
+[[./config.h]]
+[[./keymap.c]]
+
+** Build
+~just~
+#+begin_src fish
+  qmk compile -kb 'ergodox_ez/base' -km 'Dietr1ch'
+#+end_src
+
+** Flash
+~just flash~
+#+begin_src fish
+  qmk flash -kb 'ergodox_ez/base' -km 'Dietr1ch'
+#+end_src
+
+** Changelog
+*** 2026
+**** Feb
+- Updated environment and keyboard layout
+- Improved numeric keyboard in function layer
+*** 2016
+**** Dec
+- Added LED keys
+- Refreshed layout graphic, comes from http://configure.ergodox-ez.com now.
+**** Sep
+- Created a new key in layer 1 (bottom-corner key) that resets the EEPROM.
+**** Feb (V1.1)
+- Made the right-hand quote key double as Cmd/Win on hold. So you get ' when you tap it, " when you tap it with Shift, and Cmd or Win when you hold it. You can then use it as a modifier, or just press and hold it for a moment (and then let go) to send a single Cmd or Win keystroke (handy for opening the Start menu on Windows).
+
+This is what we ship with out of the factory. :) The image says it all:
+
+![Default](https://i.imgur.com/Be53jH7.png)
+*** 2014
+**** Jul
+- Created new keyboard. Starting from zero again since the repo changed way too much.

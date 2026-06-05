@@ -1,0 +1,6 @@
+:PROPERTIES:
+:CATEGORY: qmk_firmware
+:END:
+
+[[file:keyboards/ergodox_ez/keymaps/Dietr1ch/README.org][Personal layout]]
+- [[file:keyboards/ergodox_ez/keymaps/Dietr1ch/keymap.c][Keymap]]
